@@ -1,12 +1,21 @@
 ---
 layout: page
-title: About
+title: about
 permalink: /about/
-feature-img: "assets/img/sample_feature_img_2.png"
+feature-img: "assets/img/space.jpg"
 ---
 
-Type Theme is a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+<img src="{{ "/assets/img/mypic.jpg" | absolute_url }}" alt="" width="250" align="left"/>
+<br /><br /><br />
 
-Head over to the [theme's documentation](https://rohanchandra.github.io/project/type/) for much more information about Type Theme or to install this theme on your own Jekyll site.
+성명 : 장 윤 정 <br />
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+생년월일 : 1995년 09월 11일<br />
+
+주소 : 서울특별시 광진구 자양로 18길 67-8 <br />
+
+핸드폰 : 010 – 8332 - 9954 <br />
+
+E–Mail : vero911@naver.com <br />
+<br /><br /><br />
+<br /><br /><br />
