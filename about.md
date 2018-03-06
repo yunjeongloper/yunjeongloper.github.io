@@ -37,9 +37,9 @@ E–Mail : vero911@naver.com <br />
 가장 좋아하는 것<br />
 <img src="{{ "/assets/img/favorite.jpg" | absolute_url }}" alt="" width="70%" /><br /> <br />
 
-취미는 오빠와 데이트 하기 :couple: <br />
+취미는 오빠와 데이트 하기 :heart: <br />
 <img src="{{ "/assets/img/info2.jpg" | absolute_url }}" alt="" width="70%"/><br /> <br />
 
-코딩하고 싶습니다....<br />
+아참 코딩하는것도 좋아해요...<br />
 <img src="{{ "/assets/img/coding.jpg" | absolute_url }}" alt="" width="50%"/><br />
 </center>
