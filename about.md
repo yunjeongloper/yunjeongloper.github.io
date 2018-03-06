@@ -5,10 +5,11 @@ permalink: /about/
 feature-img: "assets/img/space.jpg"
 ---
 
-<img src="{{ "/assets/img/mypic.jpg" | absolute_url }}" alt="" width="250" align="left"/>
 <br />
 
-성명 : 장 윤 정 <br />
+***
+
+이름 : 장 윤 정 <br />
 
 생년월일 : 1995년 09월 11일<br />
 
@@ -17,4 +18,28 @@ feature-img: "assets/img/space.jpg"
 핸드폰 : 010 – 8332 - 9954 <br />
 
 E–Mail : vero911@naver.com <br />
-<br /><br /><br />
+
+***
+
+<br />
+
+<center>
+
+썰매타는 것을 즐기던 어린시절 <br />
+<img src="{{ "/assets/img/info.jpg" | absolute_url }}" alt="" width="70%"/> <br /> <br />
+
+바다를 좋아함<br />
+<img src="{{ "/assets/img/mypic.jpg" | absolute_url }}" alt="" width="70%" /><br /> <br />
+
+여행과 영화를 좋아함 <br />
+<img src="{{ "/assets/img/flight.jpg" | absolute_url }}" alt="" width="70%"/><br /> <br />
+
+가장 좋아하는 것<br />
+<img src="{{ "/assets/img/favorite.jpg" | absolute_url }}" alt="" width="70%" /><br /> <br />
+
+취미는 오빠와 데이트 하기<br />
+<img src="{{ "/assets/img/info2.jpg" | absolute_url }}" alt="" width="70%"/><br /> <br />
+
+코딩하고 싶습니다....<br />
+<img src="{{ "/assets/img/coding.jpg" | absolute_url }}" alt="" width="50%"/><br />
+</center>
