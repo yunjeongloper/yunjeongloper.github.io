@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sensor를 이용한 동물 보호 시스템
+title: Sensor를 이용한 동물 보호 시스템 - 팀 프로젝트
 tags: [portpolio]
 ---
 

@@ -12,6 +12,7 @@ tags: [portpolio, tdd, spring, java]
 
 회사 내에서 진행한 토이 프로젝트입니다.<br /> 개발 기간은 대략 한 달 정도이지만 기능 구현보다는 **TDD에 대한 이해와 협업 툴을 익히는 것**에 대부분의 시간을 소요하였습니다.
 개인적으로 학습 한 후 담당한 Test코드를 발표하고 리뷰를 받는 방식을 거듭하며 코드를 수정해 나갔습니다.
+제가 담당한 부분은 로그인과 댓글기능이었습니다.
 
 > TDD 학습 참고 자료 <br />
 [최범균님의 TDD 라이브 강연 _ 2013 Spring Camp](https://www.youtube.com/watch?v=AE7K-16dEjo&list=PLHr3_yhTovXUf3jdfQKsz_AueL_OPTZwD&index=6)<br />
@@ -19,7 +20,7 @@ tags: [portpolio, tdd, spring, java]
 [Spring-mvc-example github사이트](https://github.com/skprasadu/spring-mvc-examples/tree/master/bookstore-example-with-mvc)<br />
 [JUnit testing of Spring MVC application: Testing the Service Layer](https://dzone.com/articles/junit-testing-spring-mvc-0)
 
-위의 사이트들을 보며 Service -> Controller 순으로 테스트 코드를 작성하였습니다. 개발 전 기획 단계에서 가능한 많은 경우의 예외 상황을 고려하는 것의 중요성을 느꼈습니다. 처음엔 느렸지만 테스트 코드 작성이 익숙해 지면서 정확하고 빠른 품질이 좋은 코드에 한발짝 다가갈 수 있었습니다. 추가적으로 예외 처리와 Dao 테스트 코드를 보완하고 싶습니다.
+위의 사이트들을 보며 Service -> Controller 순으로 테스트 코드를 작성하였습니다. 가능한 많은 경우의 예외 상황을 고려하는 것의 중요성을 느꼈습니다. 처음엔 느렸지만 테스트 코드 작성이 익숙해 지면서 정확하고 빠른 품질이 좋은 코드에 한발짝 다가갈 수 있었습니다. 추가적으로 예외 처리와 Dao 테스트 코드를 보완하면 좋을 것 같습니다.
 
 ## Source Example
 
