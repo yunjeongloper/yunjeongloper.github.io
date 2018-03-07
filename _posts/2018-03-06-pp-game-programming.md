@@ -7,16 +7,22 @@ tags: [portpolio, tdd, spring, java]
 - 프로젝트 기간 : 2017.05 - 2017.07
 - 사용 언어 및 프레임워크 : JS, Phaser.io
 - OS 및 DB : Window, WinSP
-- [프로젝트 github 링크](https://github.com/yunjeongloper/portfolio/tree/master/member-boardPrj)
+- [프로젝트 github 링크](https://github.com/yunjeongloper/portfolio/tree/master/02.gamework)
 - 프로젝트 소개 : 15개의 질문에 두 가지의 선택지가 주어지고 선택한 카드에 따라 사랑, 돈, 스펙 세 가지의 능력치가 조절되며 게임이 진행됩니다.
 
-삼육대학교 컴퓨터학부 게임 프로그래밍 팀 프로젝트입니다. Canvas와 WebGL을 위한 오픈소스 프레임워크 Phaser을 사용하였습니다. 디자인 외의 **전체 게임 구현을 담당**하였습니다.
+삼육대학교 컴퓨터학부 게임 프로그래밍 팀 프로젝트입니다. Canvas와 WebGL을 위한 오픈소스 프레임워크 [Phaser](https://phaser.io/)을 사용하였습니다. 디자인 외의 **전체 게임 구현을 담당**하였습니다.
 
 
 > 원작 게임 <br />
 [Reigns_나무위키](https://namu.wiki/w/Reigns)<br />
 
-자바스크립트를 1도 모르지만 몰라도 무관하다고 하여서(교수님이) 도전했었는데, 무사히 과제를 제출할 수 있었습니다. 노가다로 코드를 복붙하고 수정해서 동작시켰기 때문입니다. TT
+자바스크립트를 1도 모르지만 노가다로 코드를 복붙하고 수정해서 동작시켜서 과제를 제출할 수 있었습니다...
+
+## Game 실행 화면
+<center>
+<img src="{{ "/assets/img/game.jpg" | absolute_url }}" alt="" width="47%"/>
+<img src="{{ "/assets/img/game2.jpg" | absolute_url }}" alt="" width="47%"/>
+</center>
 
 ## Source Example (부분만 발췌)
 
