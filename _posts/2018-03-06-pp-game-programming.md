@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 대학교 졸업 시뮬레이션 게임 <Produce University>
-tags: [portpolio, tdd, spring, java]
+title: 자바스크립트 게임 <Produce University> - 팀프로젝트
+tags: [portpolio, javascript, game]
 ---
 
 - 프로젝트 기간 : 2017.05 - 2017.07
@@ -16,9 +16,12 @@ tags: [portpolio, tdd, spring, java]
 > 원작 게임 <br />
 [Reigns_나무위키](https://namu.wiki/w/Reigns)<br />
 
-자바스크립트를 1도 모르지만 노가다로 코드를 복붙하고 수정해서 동작시켜서 과제를 제출할 수 있었습니다...
+자바스크립트를 모르는 상태였지만 수작업으로 코드를 복붙하고 수정해서 과제를 제출할 수 있었습니다.
+이 외에도 phaser 프레임워크를 이용해서 간단한 점프 게임과 비행 게임, shooting 게임을 토이 프로젝트로 진행하였습니다. 프레임워크를 이용하면서 특히 흥미로웠던 부분은 *Sprites*기능입니다. Sprites는 어떤 무겁게 하거나 가볍게 하는것(중력), 객체를 돌리고, 늘리고 하는 연산을 지원하는 기능입니다. raw한 값들까지 직접 조절하여 만든 게임이기에 더 애정이 생겼고, 성취감도 배로 느낄 수 있었습니다.
 
-## Game 실행 화면
+게임을 즐기기만 하다가 이렇게 만들어보니 게임이 더 좋아졌습니다. 또한 javascript의 직관적이고 간편한 특성을 경험할 수 있었습니다.
+
+## 실행 화면
 <center>
 <img src="{{ "/assets/img/game.jpg" | absolute_url }}" alt="" width="47%"/>
 <img src="{{ "/assets/img/game2.jpg" | absolute_url }}" alt="" width="47%"/>
