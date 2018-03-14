@@ -24,7 +24,7 @@ tags: [portpolio, tcpip, c]
 멀티스레드 서버를 이용한 1개의서버/n개의 클라이언트 간의 채팅 프로그램
 [github](https://github.com/yunjeongloper/portfolio/tree/master/01.tcpipwork/03.prj4)
 
-## Source Example (채팅 프로그램의 chat_server.c)
+## Source Code Example (채팅 프로그램의 chat_server.c)
 
 ```
 #include <stdio.h>

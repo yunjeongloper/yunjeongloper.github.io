@@ -27,7 +27,7 @@ tags: [portpolio, javascript, game]
 <img src="{{ "/assets/img/game2.jpg" | absolute_url }}" alt="" width="47%"/>
 </center>
 
-## Source Example (부분만 발췌)
+## Source Code Example (부분만 발췌)
 
 ```
 BasicGame.Game = function (game) {

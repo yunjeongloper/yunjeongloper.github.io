@@ -21,9 +21,15 @@ tags: [portpolio, tdd, spring, java]
 [Spring-mvc-example github사이트](https://github.com/skprasadu/spring-mvc-examples/tree/master/bookstore-example-with-mvc)<br />
 [JUnit testing of Spring MVC application: Testing the Service Layer](https://dzone.com/articles/junit-testing-spring-mvc-0)
 
-위의 사이트들을 보며 Service -> Controller 순으로 테스트 코드를 작성하였습니다. 가능한 많은 경우의 예외 상황을 고려하는 것의 중요성을 느꼈습니다. 처음엔 느렸지만 테스트 코드 작성이 익숙해 지면서 정확하고 빠른 품질이 좋은 코드에 한발짝 다가갈 수 있었습니다. 추가적으로 예외 처리와 Dao 테스트 코드를 보완하면 좋을 것 같습니다.
+위의 사이트들을 보며 Service -> Controller 순으로 테스트 코드를 작성하였습니다. 가능한 많은 경우의 예외 상황을 고려하는 것의 중요성을 느꼈습니다. 테스트 도구로는 SpringJUnit4ClassRunner 클래스의 **JUnit** 을 사용하였습니다. 처음엔 느렸지만 테스트 코드 작성이 익숙해 지면서 정확하고 빠른 품질이 좋은 코드에 한발짝 다가갈 수 있었습니다. 추가적으로 예외 처리와 Dao 테스트 코드를 보완하면 좋을 것 같습니다.
 
-## Source Example
+## Source Code Example Repository
+아래에 있는 댓글 예제 코드는 이렇게 구성되어있습니다.
+<center>
+<img src="{{ "/assets/img/tdd_repository.jpg" | absolute_url }}" alt="" width="90%"/>
+</center>
+
+## Source Code Example
 
 **1 댓글 삽입 기능의 Service Test Code**
 
