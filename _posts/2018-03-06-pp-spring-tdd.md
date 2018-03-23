@@ -9,19 +9,22 @@ tags: [portpolio, tdd, spring, java]
 - 사용 tool : IntelliJ, git, Jira, telegram
 - OS 및 DB : Mac OS, Maria DB, Mybatis
 - [프로젝트 github 링크](https://github.com/yunjeongloper/portfolio/tree/master/member-boardPrj)
-- 프로젝트 소개 : TDD(테스트 주도 개발 방법론)을 익혀 Spring framework로 간단한 게시판을 만드는 팀 프로젝트
+- 프로젝트 소개 : TDD(테스트 주도 개발 방법론)과 Spring framework로 간단한 게시판을 만드는 팀 프로젝트
 
 회사 내에서 진행한 토이 프로젝트입니다.<br /> 개발 기간은 대략 한 달 정도이지만 기능 구현보다는 **TDD에 대한 이해와 협업 툴을 익히는 것**에 대부분의 시간을 소요하였습니다.
 개인적으로 학습 한 후 담당한 Test코드를 발표하고 리뷰를 받는 방식을 거듭하며 코드를 수정해 나갔습니다.
-제가 담당한 부분은 로그인과 댓글기능이었습니다.
+제가 담당한 부분은 **로그인과 댓글기능**이었습니다.
+로그인 기능은 session 으로 처리하였습니다. 또한 로그인 실패 시 log 기록을 쌓아 계정이 잠겨지도록 했습니다. 댓글 기능은 CRUD(생성,조회,수정,삭제)를 구현하고 추가적으로 DB table에 부모값을 넣어 댓글에 댓글을 다는 부분을 구현하였습니다. DB 부모값과 jQuery를 사용하여서 view를 처리하였습니다.
 
-> TDD 학습 참고 자료 <br />
+> TDD 참조 <br />
 [최범균님의 TDD 라이브 강연 _ 2013 Spring Camp](https://www.youtube.com/watch?v=AE7K-16dEjo&list=PLHr3_yhTovXUf3jdfQKsz_AueL_OPTZwD&index=6)<br />
 [최용운님의 Spring MVC Test_2013 Spring Camp](https://youtu.be/k_88ADbuJqQ)<br />
 [Spring-mvc-example github사이트](https://github.com/skprasadu/spring-mvc-examples/tree/master/bookstore-example-with-mvc)<br />
 [JUnit testing of Spring MVC application: Testing the Service Layer](https://dzone.com/articles/junit-testing-spring-mvc-0)
 
-위의 사이트들을 보며 Service -> Controller 순으로 테스트 코드를 작성하였습니다. 가능한 많은 경우의 예외 상황을 고려하는 것의 중요성을 느꼈습니다. 테스트 도구로는 SpringJUnit4ClassRunner 클래스의 **JUnit** 을 사용하였습니다. 처음엔 느렸지만 테스트 코드 작성이 익숙해 지면서 정확하고 빠른 품질이 좋은 코드에 한발짝 다가갈 수 있었습니다. 추가적으로 예외 처리와 Dao 테스트 코드를 보완하면 좋을 것 같습니다.
+위의 사이트들을 보며 Service -> Controller 순으로 테스트 코드를 작성하였습니다. 가능한 많은 경우의 예외 상황을 고려하는 것의 중요성을 느꼈습니다. 테스트 도구로는 SpringJUnit4ClassRunner 클래스의 **JUnit** 을 사용하였습니다.
+
+처음엔 전체적으로 느렸지만 테스트 코드 작성이 익숙해 지면서 정확하고 빠른 품질이 좋은 코드에 한발짝 다가갈 수 있었습니다. 추가적으로 예외 처리와 Dao 테스트 코드를 보완하면 좋을 것 같습니다.
 
 ## Source Code Example Repository
 아래에 있는 댓글 예제 코드는 이렇게 구성되어있습니다.
