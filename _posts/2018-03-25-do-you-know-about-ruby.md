@@ -164,3 +164,198 @@ root@goorm:/workspace/rainbow# rails generate controller home
     <p><%= @message%></p>
     <% end %>
     ```
+
+### Post와 Get으로 정보 전달하기
+
+- 정보를 전달하는 방법
+  - 변수를 이용해서 전달
+  - form 태그로 request 메세지에 담아서 보낸다
+  - params로 읽는다
+  - URL로 request메세지에 담아서 보낸다
+- form태그로 정보를 보내기
+  - 계산기 만들기
+    1. controller
+    2. action
+    3. routes.rb
+    4. view
+
+## Ruby on Rails : 게시판 만들기
+
+### Rails Create와 Read 배우기
+
+- 이제 모델을 배워야 한다!
+- Model 데이터를 저장하기 위해 필수적으로 거쳐야하는 단계
+  - rails g model Post
+  - config/migrate 폴더의 migration 파일을 수정한다
+  - rake db:migrate
+- 어떻게 만들 것인가?
+  - 글 작성 form 페이지
+  - 글 생성 action (view는 필요 없음)
+  - 글 읽기 페이지
+- home_controller에서 DB 정보를 저장하는법
+  ```
+  def create
+    post = Post.new
+    post.title = params[:title]
+    post.content = params[:content]
+    post.save
+
+    redirect_to '/index'
+  end
+  ```
+- home_controller에서 DB 정보를 불러오는법
+  ```
+  def index
+    @posts = Post.all
+  end
+  ```
+- index.erb에서 받아온 정보를 view에 출력하는법
+  ```
+  <% @posts.each do |post| %>
+    제목 : <%=post.title%> <br>
+    내용 : <%=post.content%> <br>
+    <hr>
+  <% end %>
+  ```
+
+### Rails Update와 Delete 배우기
+- redirect_to "url", redirect_to :back
+- 새로운 Model의 메소드
+- Post.find(params[:post_id])
+- Post.destroy(params[:post_id])
+- Update 부분은 Create와 유사하고 Controller 부분만 조금 다름
+
+### ROR으로 CRUD게시판 만들기
+
+#### repository
+<center>
+<img src="{{ "/assets/img/ror_repository.png" | absolute_url }}" alt="" width="30%" height="400"/>
+<img src="{{ "/assets/img/ror_repository2.png" | absolute_url }}" alt="" width="30%" height="400"/>
+</center>
+
+#### home_controller
+```
+class HomeController < ApplicationController
+	def index
+		@posts = Post.all
+	end
+
+	def write
+
+	end
+
+	def create
+		post = Post.new
+		post.title = params[:title]
+		post.content = params[:content]
+		post.save
+
+		redirect_to '/index'
+	end
+
+	def modify
+		@post = Post.find(params[:post_id])
+	end
+
+	def update
+		post = Post.find(params[:post_id])
+		post.title = params[:title]
+		post.content = params[:content]
+		post.save
+
+		redirect_to '/index'
+	end
+
+	def delete
+
+		Post.destroy(params[:post_id])
+
+		redirect_to :back
+	end
+
+end
+
+```
+
+#### routes.rb
+```
+Rails.application.routes.draw do
+	get '/index' => 'home#index'
+
+	get '/write' => 'home#write'
+
+	post '/create' => 'home#create'
+
+	get '/modify/:post_id' => 'home#modify'
+
+	post '/update/:post_id' => 'home#update'
+
+	get '/delete/:post_id' => 'home#delete'
+
+end
+
+```
+
+#### db>migrate>20171498329....posts
+```
+class CreatePosts < ActiveRecord::Migration[5.0]
+  def change
+    create_table :posts do |t|
+		t.string :title
+		t.text :content
+      t.timestamps
+    end
+  end
+end
+```
+
+#### index.erd
+```
+Read 페이지
+<br>
+<hr>
+<% @posts.each do |post| %>
+제목 : <%=post.title%> <br>
+내용 : <%=post.content%> <br>
+<a href="/modify/<%=post.id%>">수정하기 </a>
+<a href="/delete/<%=post.id%>">삭제하기 </a>
+<hr>
+<% end %>
+<a href="/write"> 글쓰러가기 </a>
+<br>
+```
+
+#### write.erd
+```
+FORM 태그 페이지
+<br>
+<a href="/index">뒤로돌아가기</a>
+<form action="/create" method="post">
+	제목:<input type="string" name="title"> <br>
+	내용:<input type="text" name="content"> <br>
+	<input type="submit" name="go">
+</form>
+```
+
+#### modify.erd
+```
+수정FORM 태그 페이지
+<br>
+<a href="/index">뒤로돌아가기</a>
+<form action="/update/<%=@post.id%>" method="post">
+	제목:<input type="string" name="title" value="<%=@post.title%>"> <br>
+	내용:<input type="text" name="content" value="<%=@post.content%>"> <br>
+	<input type="submit" name="go">
+</form>
+```
+
+## 스캐폴딩으로 빠르게 만들기
+- 기본적인 구조를 Scaffold 명령어로 만든다
+  ```
+  rails g scaffold Post content:string title:string
+  rake db:migrate
+  ```
+- Scaffolding의 결과
+  - Controller : index, new, create, edit, update, destroy
+  - View : index.html.erb, show.html.erb, new.html.erb, edit.html.erd . .
+  - routes.rb : resources:posts
