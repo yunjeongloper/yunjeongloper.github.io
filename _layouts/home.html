@@ -9,7 +9,7 @@ layout: default
     {{ site.theme_settings.header_text }}
   </div>
   {% endif %}
-  <div style="text-align:center; margin-top:60px; color:gray">
+  <div style="text-align:center; margin-top:30px; color:gray">
     <h3>
       Posts
     </h3>
@@ -19,11 +19,11 @@ layout: default
     {% for post in paginator.posts %}
     <div class="post-teaser">
       <header>
-        <h2>
+        <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title }}
           </a>
-        </h2>
+        </h3>
         <p class="meta">
           {{ post.date | date: "%B %-d, %Y" }}
         </p>

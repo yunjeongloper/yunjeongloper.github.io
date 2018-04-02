@@ -9,9 +9,11 @@
   padding: $padding-small $padding-large;
   @media (max-width: 1000px) {
     padding: $padding-small * 1.5 $padding-large / 1.6;
+    font-size: 15px;
   }
   @media (max-width: 576px) {
-    padding: $padding-small;
+    padding: 3% 12.5%;
+    font-size: 13px;
   }
 }
 // Buttons
@@ -19,8 +21,8 @@
   border-radius: 0.3em;
   border: 1px solid;
   display: inline-block;
-  margin: 1em 0;
-  padding: 0.5em 0.75em;
+  margin: 0.8em 0;
+  padding: 0.4em 0.75em;
 }
 a.button {
   @extend .button-link;
