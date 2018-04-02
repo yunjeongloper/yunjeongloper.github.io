@@ -52,6 +52,7 @@
   padding: 5% $padding-large 5% $padding-large;
   text-align: center;
   @media (max-width: 600px) {
-    padding: 5%;
+    padding: 8%;
+    font-size: 0.8em;
   }
 }
