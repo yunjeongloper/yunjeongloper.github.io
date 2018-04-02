@@ -13,7 +13,7 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-    <p>포트폴리오 겸 개발 공부 블로그</p>
+    <p>윤정쓰 개발 블로그</p>
     <p><cite>"I code like a girl"</cite></p>
   header_text_feature_image: assets/img/space.jpg
   footer_text: >
