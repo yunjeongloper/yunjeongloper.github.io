@@ -9,9 +9,11 @@
 			<img class="avatar" src="{{ site.baseurl }}/{{ site.theme_settings.avatar }}" alt=""/>
 		</a>
 		{% endif %}
+		<!--
 		<h1 class="site-title">
 			<a href="{{ site.baseurl }}/">{{ site.theme_settings.title }}</a>
 		</h1>
+	-->
 	</div>
 	<nav class="site-nav">
 		<ul>
@@ -19,7 +21,7 @@
 			{% if page.title and page.hide != true %}
 			<li>
 				<a class="page-link" href="{{ page.url | relative_url }}">
-					{{ page.title }}     
+					{{ page.title }}
 				</a>
 			</li>
 			{% endif %}

@@ -16,6 +16,12 @@
     font-size: 13px;
   }
 }
+%padding-header {
+  padding: 3% 20%;
+  @media (max-width: 1000px) {
+    padding: $padding-x-small $padding-x-small;
+  }
+}
 
 // Buttons
 .button {

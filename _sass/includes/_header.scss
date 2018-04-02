@@ -1,5 +1,5 @@
 .site-header {
-  @extend %padding-small;
+  @extend %padding-header;
   background: $brand-color;
   border-bottom: 1px solid $border-color;
   display: inline-block;
@@ -43,10 +43,9 @@
     @media (max-width: 1100px) {
       ul {
         display: inline-block;
-        float: left;
-        padding-top: $padding-small;
+        float: right;
+        padding-top: 1%;
         text-align: left;
-        width: 100%;
       }
     }
   }
