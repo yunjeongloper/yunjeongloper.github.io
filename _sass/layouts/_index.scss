@@ -1,4 +1,12 @@
 // Header text feature
+
+
+@media screen and (max-width: 576px) {
+    div.call-out {
+    font-size: 1em;
+      }
+}
+
 .call-out {
   @extend %padding-regular;
   padding: 5% 20%;
