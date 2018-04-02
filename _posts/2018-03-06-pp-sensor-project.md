@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 센서를 이용한 반려동물 보호 시스템 - 팀 프로젝트
-tags: [portpolio, raspberry-pi]
+tags: [portpolio]
 ---
 
 - 프로젝트 기간 : 2017.10 - 2017.11 <br />
