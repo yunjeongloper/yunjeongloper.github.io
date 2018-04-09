@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring (내가 작성한 코드를 기반으로)
+title: Spring Framework
 tags: [DoYouKnowAbout...]
 ---
 
@@ -63,6 +63,49 @@ Dependency Injection. (=의존성 주입)
     <servlet-name>action</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+```
+
+#### dispatcher-servlet.xml
+
+```
+
+  <mvc:annotation-driven/>
+
+  <mvc:resources location="/resources/" mapping="/resources/**"/>
+
+  <context:component-scan base-package="com.devunlimit.project">
+    <context:include-filter type="annotation"
+      expression="org.springframework.stereotype.Controller"/>
+    <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+    <context:exclude-filter type="annotation"
+      expression="org.springframework.stereotype.Repository"/>
+  </context:component-scan>
+
+  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix" value="/WEB-INF/jsp/"/>
+    <property name="suffix" value=".jsp"/>
+  </bean>
+
+  <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <!-- max upload size in bytes -->
+    <property name="maxUploadSize" value="15728640" /> <!-- 15MB -->
+    <!-- max size of file in memory (in bytes) -->
+    <property name="maxInMemorySize" value="15728640" /> <!-- 15MB -->
+  </bean>
+
+  <mvc:interceptors>
+    <mvc:interceptor>
+      <mvc:mapping path="/**/*"/>
+      <mvc:exclude-mapping path="/resources/**"/> <!-- js,css 파일 제외 -->
+      <mvc:exclude-mapping path="/signup.do"/> <!-- 회원가입창 -->
+      <mvc:exclude-mapping path="/loginform.do"/> <!-- 로그인화면 -->
+      <mvc:exclude-mapping path="/login.do"/> <!-- 로그인 처리 주소 -->
+      <mvc:exclude-mapping path="/checkId.do"/> <!-- 중복아이디 -->
+      <mvc:exclude-mapping path="/logout.do"/> <!-- 로그아웃 처리 주소 -->
+      <bean class="com.devunlimit.project.util.interceptor.LoginInterCeptor"/>
+    </mvc:interceptor>
+  </mvc:interceptors>
+
 ```
 
 
