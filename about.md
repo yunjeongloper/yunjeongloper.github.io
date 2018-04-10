@@ -43,3 +43,5 @@ E–Mail : vero911@naver.com <br />
 아참 코딩하는것도 좋아해요...<br /><br />
 <img src="{{ "/assets/img/coding.jpg" | absolute_url }}" alt="" width="50%"/><br />
 </center>
+
+<br /><br />
