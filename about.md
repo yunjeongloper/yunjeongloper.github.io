@@ -9,15 +9,9 @@ feature-img: "assets/img/space.jpg"
 
 ***
 
-이름 : 장 윤 정 <br />
+장 윤 정 (YunJeong Jang) <br />
 
-생년월일 : 1995년 09월 11일<br />
-
-주소 : 서울특별시 광진구 자양로 18길 67-8 <br />
-
-핸드폰 : 010 – 8332 - 9954 <br />
-
-E–Mail : vero911@naver.com <br />
+vero911@naver.com <br />
 
 ***
 
