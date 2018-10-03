@@ -1,7 +1,7 @@
 ---
 layout: page
 title: about
-permalink: /about/
+permalink: /about
 feature-img: "assets/img/space.jpg"
 ---
 

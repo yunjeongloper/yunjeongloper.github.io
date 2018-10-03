@@ -1,0 +1,276 @@
+Q1
+
+public class CapCase {
+
+	public String toCapCase(String phrase) {
+		// TODO put your code below this
+
+      if(phrase=="" || phrase==null)
+        return null;
+
+      String [] arr;
+      String answer = "";
+
+      arr = phrase.split(" ");
+
+      for(int i=0; i<arr.length; i++){
+        String word = "";
+        String first = arr[i].substring(0,1).toUpperCase();
+        String last = arr[i].substring(1,arr[i].length());
+        word = first + last;
+        if(i == arr.length-1){
+                  answer = answer + word;
+        } else{
+                  answer = answer + word +" ";
+
+        }
+      }
+
+		return answer;
+	}
+
+}
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+
+import org.junit.Test;
+
+public class CapCaseTest {
+
+
+	CapCase capCase = new CapCase();
+
+	@Test
+	public void test() {
+		assertEquals("toCapCase doesn't return a valide CapCase String! try again please :)", capCase.toCapCase("most trees are blue"), "Most Trees Are Blue");
+	}
+
+	@Test
+	public void testNullArg() {
+		assertNull("Must return null when the arg is null", capCase.toCapCase(null));
+	}
+
+	@Test
+	public void testEmptyArg() {
+		assertNull("Must return null when the arg is null", capCase.toCapCase(""));
+	}
+
+}
+
+Q2
+
+class Challenge {
+  public static String getMiddle( String str ) {
+
+    String answer = "";
+    int num = 0;
+
+    if(str.length()%2 == 1){
+      num = str.length()/2;
+      answer = str.substring(num,num+1);
+    } else {
+      num = ((str.length()/2)-1);
+      answer = str.substring(num,num+2);
+    }
+
+    return answer;
+  }
+}
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.Arrays;
+
+public class GetMiddleTests {
+  @Test
+  public void shouldFindTheMiddleCharacters() {
+    assertEquals("A", Challenge.getMiddle("A"));
+    assertEquals("es", Challenge.getMiddle("test"));
+    assertEquals("t", Challenge.getMiddle("testing"));
+    assertEquals("dd", Challenge.getMiddle("middle"));
+  }
+}
+
+Q3
+
+public class Solution {
+
+  public int solution(int number) {
+    //TODO: Code stuff here
+    int answer = 0;
+
+    for(int i=1; i<number; i++) {
+      if(i%3==0 || i%5==0){
+        answer += i;
+      }
+    }
+
+    return answer;
+  }
+}
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SolutionTest {
+    @Test
+    public void testBasics() {
+      assertEquals(23, new Solution().solution(10));
+    }
+
+}
+
+Q4
+
+public class WeightSort {
+
+	public static String orderWeight(String string) {
+		// your code
+
+      String answer = "";
+      String[] arr = null;
+      int[] intArr = new int[50];
+      int i,j;
+
+      arr = string.split(" ");
+
+      for(i=0; i<arr.length; i++){
+
+        int num = Integer.parseInt(arr[i]);
+        int sum = 0;
+        while(num!=0) {
+          sum += (num%10);
+          num = num/10;
+        }
+        intArr[i] = sum;
+        System.out.println(intArr[i]);
+      }
+
+      String temp = "";
+
+
+      for(i=0; i<arr.length-1; i++) {
+        int min = i;
+        for(j=i+1; j<arr.length; j++) {
+          if(intArr[i]>intArr[j]){
+            min = j;
+          } else if (intArr[i]==intArr[j]) {
+            if(min == 0) {
+              min = j;
+            } else if (Integer.parseInt(arr[j])<Integer.parseInt(arr[min])) {
+              min = j;
+            }
+          }
+        }
+        temp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = temp;
+        answer += arr[i] + " ";
+        System.out.println("Swap!"+i+"와"+min);
+        System.out.println("i는"+intArr[i]);
+      }
+      answer += arr[arr.length-1];
+
+      return answer;
+
+	}
+}
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class WeightSortTest {
+
+	@Test
+	public void BasicTests() {
+		System.out.println("****** Basic Tests ******");
+		assertEquals("2000 103 123 4444 99", WeightSort.orderWeight("103 123 4444 99 2000"));
+		assertEquals("11 11 2000 10003 22 123 1234000 44444444 9999", WeightSort.orderWeight("2000 10003 1234000 44444444 9999 11 11 22 123"));
+	}
+}
+
+Q5
+
+class Challenge {
+  public static int highOrderBitmask( int wordSize ) {
+  }
+}
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class WeightSortTest {
+
+	@Test
+	public void BasicTests() {
+		System.out.println("****** Basic Tests ******");
+		assertEquals("2000 103 123 4444 99", WeightSort.orderWeight("103 123 4444 99 2000"));
+		assertEquals("11 11 2000 10003 22 123 1234000 44444444 9999", WeightSort.orderWeight("2000 10003 1234000 44444444 9999 11 11 22 123"));
+	}
+}
+
+Q6
+public class BraceChecker {
+
+  public boolean isValid(String braces) {
+    // Add code here
+
+    if(braces.charAt(0)=='}' || braces.charAt(0)==']' ||
+       braces.charAt(0)==')')
+      return false;
+
+    Stack<Character> stack = new Stack<Character>();
+
+    char c;
+
+    for(int i=0; i<braces.length(); i++) {
+      c = braces.charAt(i);
+      if(c == '(')
+        stack.push(c);
+      else if(c == '{')
+        stack.push(c);
+      else if(c == '[')
+        stack.push(c);
+      else if(c == ')') {
+        if(stack.peek() == '(')
+          stack.pop();
+        else
+          return false;
+      } else if (c == ']') {
+        if(stack.peek() =='[')
+          stack.pop();
+        else
+          return false;
+      } else if (c == '}') {
+        if(stack.peek() == '{')
+          stack.pop();
+        else
+          return false;
+      }
+    }
+
+    return stack.empty();
+
+  }
+}
+import static org.junit.Assert.*;
+import org.junit.Test;
+import java.util.Stack;
+
+public class BraceCheckerTests {
+
+  private BraceChecker checker = new BraceChecker();
+
+	@Test
+	public void testValid() {
+    assertEquals(true, checker.isValid("()"));
+	}
+
+  @Test
+	public void testInvalid() {
+    assertEquals(false, checker.isValid("[(])"));
+	}
+
+}
