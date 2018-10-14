@@ -41,6 +41,19 @@
     margin-top: 1em;
   }
 }
+
+// header
+.page-link {
+  margin-left: 0.5em;
+}
+
+.excerpt_href {
+  color: $text-color;
+    &:hover {
+      color: darken($text-color, 15%);
+    }
+}
+
 // Pagination
 .pagination .button {
   margin: 0 1.5em;

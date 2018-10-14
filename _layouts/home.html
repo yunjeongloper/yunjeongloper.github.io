@@ -29,10 +29,14 @@ layout: default
         </p>
       </header>
       <div class="excerpt">
-        {{ post.excerpt }}
+        <a class="excerpt_href" href="{{ post.url | relative_url }}">
+          {{ post.excerpt }}
+        </a>
+        <!-- {{ post.excerpt }}
         <a class="button" href="{{ post.url | relative_url }}">
           {{ site.theme_settings.str_continue_reading }}
         </a>
+        -->
       </div>
     </div>
     {% endfor %}
