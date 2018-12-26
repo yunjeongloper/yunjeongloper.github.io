@@ -81,3 +81,6 @@ plugins: [jekyll-paginate, jekyll-seo-tag]
 exclude:
   - Gemfile
   - Gemfile.lock
+  
+# EMOJI
+emoji_dir: ./images/emoji
