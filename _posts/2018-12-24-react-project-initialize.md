@@ -19,23 +19,31 @@ Mac OS와 Intellij IDE 기반으로 진행되지만, Window에서의 환경 셋�
 
 
 ### 1. nvm 설치
-nvm(Nodejs Version Management)을 사용하면 쉽게 node.js의 버전을 관리할 수 있게 된다. Mac 에서 nvm을 사용하지 않고 node.js를 먼저 설치하게 되면 루트 계정에 설치되기 때문에 권한 문제로 node.js 다루기가 까다로워진다. 이전에 node.js를 설치한 이력이 있다면 전부 깨끗하게 삭제하고 지우는 것을 추천한다. node.js를 완전히 삭제하는 방법은 구글에 치면 자세하게 나온다.
 
-#### 최신 버전중에서 안정된 버전의 nvm 설치하기
+nvm(Nodejs Version Management)을 사용하면 쉽게 node.js의 버전을 관리할 수 있게 된다. Mac 에서 nvm을 사용하지 않고 node.js를 먼저 설치하게 되면 루트 계정에 설치되기 때문에 권한 문제로 node.js 다루기가 까다로워진다.
+
+[Mac, Linux 운영체제에서 nvm 설치하기](https://github.com/creationix/nvm#manual-install)
+
+[Windows 운영체제에서 nvm 설치하기](https://github.com/coreybutler/nvm-windows)
+ <br> <br>
+
+### 2. node.js 설치
+
+이전에 node.js를 설치한 이력이 있다면 전부 깨끗하게 삭제하고 지우는 것을 추천한다. node.js를 완전히 삭제하는 방법은 구글에 치면 자세하게 나온다.
+
+nvm으로 node.js를 설치하는 명령어는 아래와같다.
+
+#### 최근 버전 중에서 안정된 버전의 node 설치하기
 
 ```bash
  nvm install lastest
 ```
- <br> <br>
-
-### 2. node.js 설치
-node.js는 공식 홈페이지에 들어가서 다운로드해주면 된다. Window라면 해당 홈페이지에서 다른 운영 체제 버튼을 클릭하여서 본인에게 해당되는 운영 체제의 node.js를 설치하면 된다.
 
 #### node.js 설치 여부 확인
 ```bash
- node –version
+ node –-version
 ```
- <br> <br>
+ <br>
 
 ### 3. nvm을 이용하여 node.js 버전 셋팅
 
@@ -50,7 +58,7 @@ node.js는 공식 홈페이지에 들어가서 다운로드해주면 된다. Win
 ```bash
  nvm use 11.5.0
 ```
- <br>
+<br>
 
 ### 4. yarn 설치
 
@@ -58,14 +66,14 @@ yarn은 npm의 업그레이드 버전이라고 생각할 수 있는데, npm보�
 
 #### yarn 설치하기
 ```bash
- npm install yarn
+ npm install -g yarn
 ```
 
 이제 React.js CLI 프로젝트를 실행할 수 있는 개발 환경 셋팅이 완료되었다!!
  <br> <br>
 
 ### 5. CLI 설치
-React CLI 설치는 [이 사이트](https://velopert.com/2037)를 참고하여서 설치하였다.
+React CLI 설치는 [이 사이트](https://velopert.com/2037)를 참고하였다.
 
 #### 설치하기
 ```bash
@@ -131,4 +139,4 @@ EX) 실행 브라우저를 변경하고 싶다면 아래와 같이 환경값을 
 <center>
 <img src="{{ "/assets/img/react-1-09.png" | absolute_url }}" alt=""/>
 </center>
-React.js CLI 프로젝트 실행 완료
+React.js CLI 프로젝트가 정상적으로 실행된 것을 볼 수 있다 :D
