@@ -1,13 +1,17 @@
 .site-header {
   @extend %padding-header;
-  background: $brand-color;
-  border-bottom: 1px solid $border-color;
+  // background: $brand-color;
+  // border-bottom: 1px solid $border-color;
   display: inline-block;
+  position: sticky;
+  top: 0;
   float: left;
   width: 100%;
 
   a {
-    color: $header-link-color;
+    // color: $header-link-color;
+    color: white;
+    font-size: 1.0em;
   }
 
   .avatar {
