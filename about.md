@@ -9,7 +9,7 @@ feature-img: "assets/img/space.jpg"
 
 ***
 
-장 윤 정 (YunJeong Jang) <br />
+장윤정 Veronica <br />
 
 vero911@naver.com <br />
 

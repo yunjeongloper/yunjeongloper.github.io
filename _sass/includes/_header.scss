@@ -7,11 +7,20 @@
   top: 0;
   float: left;
   width: 100%;
-
+  // z-index: 1;
+  
   a {
     // color: $header-link-color;
     color: white;
     font-size: 1.0em;
+  }
+
+  .color-black {
+    color: black
+  }
+
+  .color-white {
+    color: white
   }
 
   .avatar {
@@ -34,6 +43,7 @@
     ul {
       margin: 0;
       padding: 0;
+      padding-top: 1%;
       list-style: none;
       line-height: 1.5;
       float: right;
@@ -89,4 +99,12 @@
            color: $search-color;
         }
     }
+}
+
+.background-white {
+  background: white
+}
+
+.borderbottom-1 {
+  border-bottom: 1px solid $border-color;
 }

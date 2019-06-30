@@ -5,7 +5,7 @@ url: "https://yunjeongloper.github.io/"
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: YUNJEONGLOPER
+  title: # YUNJEONGLOPER
   avatar: assets/img/avatar.png
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
@@ -21,7 +21,7 @@ theme_settings:
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: vero911@naver.com # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
   dribbble:
@@ -54,8 +54,8 @@ theme_settings:
   str_email: "Email"
   str_next_post: "Next post"
   str_previous_post: "Previous post"
-  str_next_page: "Next"
-  str_previous_page: "Prev"
+  str_next_page: # "Next"
+  str_previous_page: # "Prev"
   str_continue_reading: "Continue reading"
   str_javascript_required_disqus: "Please enable JavaScript to view comments."
   str_search_no_results: "No results found."

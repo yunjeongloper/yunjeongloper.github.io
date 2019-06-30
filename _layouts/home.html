@@ -8,8 +8,10 @@ layout: default
       style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
     {{ site.theme_settings.header_text }}
   </div> -->
+  <!-- <div>
+    <img src="{{ "/assets/img/Astronaut-me.png" | absolute_url }}" alt="" width="47%"/>
+  </div> -->
 	<div class="galaxy-square">
-      <!-- {{ site.theme_settings.header_text }} -->
 		<div class="star" id="star1"></div>
 		<div class="star" id="star2"></div>
 		<div class="star" id="star3"></div>
@@ -26,11 +28,6 @@ layout: default
 		<div class="star" id="star14"></div>
 	</div>
   {% endif %}
-  <div class="post-header">
-    <h3>
-      Posts
-    </h3>
-  </div>
   </div>
   <div class="posts">
     {% for post in paginator.posts %}

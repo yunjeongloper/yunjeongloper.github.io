@@ -1,25 +1,34 @@
-// (function () {
+(function () {
 
+    var pageLink = document.getElementsByClassName("page-link");
 
-//     // When the user scrolls the page, execute myFunction 
-//     window.onscroll = function() {myFunction()};
+    if (window.location.pathname === '/') {
+        var navbar = document.getElementsByClassName("site-header");
+        var home = document.getElementsByClassName("galaxy-square");
     
-//     // Get the navbar
-//     var navbar = document.getElementsByClassName("site-header");
-
-//     // Get the offset position of the navbar
-//     var sticky = navbar.offsetTop;
-
-//     // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-//     function myFunction() {
-//     //   if (window.pageYOffset >= sticky) {
-//     //     navbar.classList.add("sticky")
-//     //   } else {
-//     //     navbar.classList.remove("sticky");
-//     //   }
-
-//         console.log('sticky', sticky);
-//         console.log('navbar', navbar);
-//     }
+        window.onscroll = function() {changeNavStyle()};
     
-// })();
+        function changeNavStyle() {
+            var navHeight = navbar[0].offsetHeight;
+            var homeHeight = home[0].offsetHeight;
+    
+            if (window.pageYOffset + navHeight >= homeHeight) {
+                navbar[0].classList.add('background-white', 'borderbottom-1');
+                for(var i = 0; i < pageLink.length; i ++ ) {
+                    pageLink[i].classList.add('color-black');
+                }
+            } else {
+                navbar[0].classList.remove('background-white', 'borderbottom-1');
+                for(var i = 0; i < pageLink.length; i ++ ) {
+                    pageLink[i].classList.remove('color-black');
+                }
+            }
+        }
+    } else {
+        console.log(pageLink);
+        for(var i = 0; i < pageLink.length; i ++ ) {
+            pageLink[i].classList.add('color-black');
+        }
+    }
+
+})();
