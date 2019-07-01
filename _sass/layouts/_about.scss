@@ -1,0 +1,242 @@
+$space-height: 100vh;
+
+.astronaut-me {
+    position: absolute;
+    bottom: 0;
+    // width: 50%;
+    margin-left: 10%;
+    z-index: 10;
+
+    @media (max-width: 1120px) {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeftNarrow {
+    0% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.about-me {
+    @extend %padding-header;
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    text-align: right;
+
+    %about-me-text {
+        color: white;
+        margin-right: 2%;
+    }
+
+    .title {
+        @extend %about-me-text;
+        font-size: 2em;
+        animation: 500ms ease-out 0s 1 slideInFromLeft;
+        margin-bottom: 1em;
+        font-weight: 200;
+    }
+    .desc {
+        @extend %about-me-text;
+        font-size: 1.5em;
+        animation: 900ms ease-out 0s 1 slideInFromLeftNarrow;
+        font-weight: 200;
+    }
+    hr {
+        width: 10px;
+        border: 0.5px solid gray;
+    }
+
+    @media (max-width: 1185px) {
+        text-align: center;
+        top: 5em;
+    }
+}
+
+.galaxy-square {
+    width: 100%;
+    height: $space-height;
+    background: -webkit-linear-gradient(bottom left, rgba(20,37,82,1) 0%, rgb(34, 28, 63) 39%, rgb(20, 44, 66) 55%, rgb(27, 31, 82) 76%, rgb(22, 18, 44) 100%);
+    background: -o-linear-gradient(bottom left, rgba(20,37,82,1) 0%, rgba(34, 28, 63, 1) 39%, rgba(20, 44, 66,1) 55%, rgba(27, 31, 82,1) 76%, rgba(22, 18, 44,1) 100%);
+    background: linear-gradient(to top right, rgba(20,37,82,1) 0%, rgba(34, 28, 63, 1) 39%, rgba(20, 44, 66,1) 55%, rgba(27, 31, 82,1) 76%, rgba(22, 18, 44,1) 100%);
+
+    .star{
+        width: 5px;
+        height: 5px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-color: #FFF;
+        position: absolute;
+        box-shadow: 0 0 20px #FFF;
+    }
+
+    #star1{
+        width: 4px;
+        height: 4px;
+        margin-left: 200/400*100%;
+        margin-top: 0.125 * $space-height;
+        background-color: #BEBEBE;
+        animation: destello-efecto-01 3s infinite;
+        -webkit-animation: destello-efecto-01 3s infinite;
+    }
+
+    #star2{
+        width: 10px;
+        height: 10px;
+        margin-left: 50/400*100%;
+        margin-top: 0.25 * $space-height;
+        animation: destello-efecto-01 2.7s infinite;
+        -webkit-animation: destello-efecto-01 2.7s infinite;
+    }
+
+    #star3{
+        width: 6px;
+        height: 6px;
+        margin-left: 150/400*100%;
+        margin-top: 0.3 * $space-height;
+        animation: destello-efecto-01 3.3s infinite;
+        -webkit-animation: destello-efecto-01 3.3s infinite;
+    }
+
+    #star4{
+        width: 15px;
+        height: 15px;
+        margin-left: 290/400*100%;
+        margin-top: 0.225 * $space-height;
+        background-color: #FFDCA8;
+        animation: destello-efecto-01 2.5s infinite;
+        -webkit-animation: destello-efecto-01 2.5s infinite;
+    }
+
+    #star5{
+        width: 7px;
+        height: 7px;
+        margin-left: 80/400*100%;
+        margin-top: 0.45 * $space-height;
+        background-color: #9EA9C8;
+        animation: destello-efecto-01 5s infinite;
+        -webkit-animation: destello-efecto-01 2.8s infinite;
+    }
+
+    #star6{
+        margin-left: 290/400*100%;
+        margin-top: 0.575 * $space-height;
+        background-color: #B3E1C6;
+        animation: destello-efecto-01 1s infinite;
+        -webkit-animation: destello-efecto-01 2s infinite;
+    }
+
+    #star7{
+        width: 4px;
+        height: 4px;
+        margin-left: 350/400*100%;
+        margin-top: 0.375 * $space-height;
+        background-color: #BE9EC8;
+        animation: destello-efecto-01 2.6s infinite;
+        -webkit-animation: destello-efecto-01 2.6s infinite;
+    }
+
+    #star8{
+        width: 8px;
+        height: 8px;
+        margin-left: 230/400*100%;
+        margin-top: 0.425 * $space-height;
+        background-color: #FFCBC2;
+        animation: destello-efecto-01 4s infinite;
+        -webkit-animation: destello-efecto-01 4s infinite;
+    }
+
+    #star9{
+        width: 13px;
+        height:13px;
+        margin-left: 160/400*100%;
+        margin-top: 0.625 * $space-height;
+        background-color: #F6F5A3;
+        animation: destello-efecto-01 3.2s infinite;
+        -webkit-animation: destello-efecto-01 3.2s infinite;
+    }
+
+    #star10{
+        width: 4px;
+        height: 4px;
+        margin-left: 270/400*100%;
+        margin-top: 0.775 * $space-height;
+        background-color: #DFBCFF;
+        animation: destello-efecto-01 1.8s infinite;
+        -webkit-animation: destello-efecto-01 1.8s infinite;
+    }
+
+    #star11{
+        width: 20px;
+        height:20px;
+        margin-left: 340/400*100%;
+        margin-top: 0.675 * $space-height;
+        background-color: #BDFFE6;
+        animation: destello-efecto-01 2.3s infinite;
+        -webkit-animation: destello-efecto-01 2.3s infinite;
+    }
+
+    #star12{
+        width: 8px;
+        height:8px;
+        margin-left: 190/400*100%;
+        margin-top: 0.875 * $space-height;
+        background-color: #CCF7FF;
+        animation: destello-efecto-01 5s infinite;
+        -webkit-animation: destello-efecto-01 3s infinite;
+    }
+
+    #star13{
+        width: 15px;
+        height: 15px;
+        margin-left: 30/400*100%;
+        margin-top: 0.875 * $space-height;
+        background-color: #FFDCA8;
+        animation: destello-efecto-01 2.6s infinite;
+        -webkit-animation: destello-efecto-01 2.6s infinite;
+    }
+
+    #star14{
+        width: 4px;
+        height: 4px;
+        margin-left: 100/400*100%;
+        margin-top: 0.775 * $space-height;
+        background-color: #DFBCFF;
+        animation: destello-efecto-01 1.8s infinite;
+        -webkit-animation: destello-efecto-01 1.8s infinite;
+    }
+}
+
+@-webkit-keyframes destello-efecto-01 {
+  	0%, 50%, 100% {opacity: 1;}
+  	25%, 75% {opacity: 0.6;transform: scale3d(.3, .3, .3);-webkit-transform: scale3d(.3, .3, .3);}
+}
+
+.sun{
+	width: 150px;
+    height: 150px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #FFFE52;
+   	position: absolute;
+	top:230px;
+	margin-left: 450/400*100%;
+	margin-top: 100px;
+	box-shadow: 1px 1px 40px 15px #FFFE52;
+}
