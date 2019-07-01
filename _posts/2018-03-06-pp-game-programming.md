@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 자바스크립트 게임 <Produce University> - 팀 프로젝트
-tags: [portpolio, javascript, game]
+tags: [javascript, game]
 ---
 
 - 프로젝트 기간 : 2017.05 - 2017.07

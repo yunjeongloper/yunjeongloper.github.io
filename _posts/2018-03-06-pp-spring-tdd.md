@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TDD를 이용한 Spring 게시판 - 팀 프로젝트
-tags: [portpolio]
+tags: [Spring, Java, TDD]
 ---
 
 - 프로젝트 기간 : 2017.12 - 2018.01

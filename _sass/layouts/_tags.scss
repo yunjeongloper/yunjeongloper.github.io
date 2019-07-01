@@ -1,7 +1,27 @@
-.tag-title {
-  color: $tags-color;
-  margin-bottom: 0;
+.tag-label {
+  display: inline-block;
+  margin-right: 0.6em;
+  margin-bottom: 0.5em;
+  border-radius: 0.3em;
+  border: 1px solid $border-color;
+  padding: 0.4em 0.6em;
+  color: rgb(55, 61, 68)
 }
+
+.tag-title {
+  margin-bottom: 0;
+
+  a {
+    color: $tags-color;
+  }
+
+  a:hover {
+    color: $tags-color;
+    text-decoration: none;
+    cursor: default;
+  }
+}
+
 .tagged-post {
   .title {
     margin-top: 0;

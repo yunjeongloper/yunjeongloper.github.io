@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TCP/IP 소켓 프로그래밍 - 토이 프로젝트
-tags: [portpolio, tcpip, c]
+tags: [tcpip, c]
 ---
 
 - 프로젝트 기간 : 2017.05 - 2018.07
