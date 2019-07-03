@@ -4,13 +4,6 @@ layout: default
 
 <div class="home">
   {% if site.theme_settings.header_text %}
-  <!-- <div class="call-out"
-      style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
-    {{ site.theme_settings.header_text }}
-  </div> -->
-  <!-- <div>
-    <img src="{{ "/assets/img/Astronaut-me.png" | absolute_url }}" alt="" width="47%"/>
-  </div> -->
 	<div class="galaxy-square">
 		<div class="star" id="star1"></div>
 		<div class="star" id="star2"></div>
@@ -29,7 +22,7 @@ layout: default
 	</div>
   {% endif %}
   </div>
-  <div class="posts">
+  <div class="posts" id="posts">
     {% for post in paginator.posts %}
     <div class="post-teaser">
       <header>
@@ -46,41 +39,14 @@ layout: default
         <a class="excerpt_href" href="{{ post.url | relative_url }}">
           {{ post.excerpt }}
         </a>
-        <!-- {{ post.excerpt }}
-        <a class="button" href="{{ post.url | relative_url }}">
-          {{ site.theme_settings.str_continue_reading }}
-        </a>
-        -->
       </div>
     </div>
     {% endfor %}
   </div>
-
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}" class="button" style="border: 0;" >
-      <i class="fa fa-chevron-left"></i>
-      {{ site.theme_settings.str_previous_page }}
-    </a>
-    {% else %}
-    <a class="button disabled" style="border: 0;" >
-      <i class="fa fa-chevron-left"></i>
-      {{ site.theme_settings.str_previous_page }}
-    </a>
-    {% endif %}
-    {{ paginator.page }} / {{ paginator.total_pages }}
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url | replace: '//', '/' }}" class="button" style="border: 0;">
-      {{ site.theme_settings.str_next_page }}
-      <i class="fa fa-chevron-right"></i>
-    </a>
-    {% else %}
-    <a class="button disabled" style="border: 0;">
-      {{ site.theme_settings.str_next_page }}
-      <i class="fa fa-chevron-right"></i>
-    </a>
-    {% endif %}
-  </div>
-  {% endif %}
 </div>
+<script src="{{ "/assets/lib/InfiniteScroll.js" | relative_url }}"></script>
+<script>
+    var postWrapperId = 'posts';
+    var paginatePath = '/page/';
+    new InfiniteScroll(paginatePath, postWrapperId);
+</script>

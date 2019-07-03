@@ -2,10 +2,16 @@
 <html class="no-js">
   {% include head.html %}
   <body>
+    <script src="{{ "/assets/js/header.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/scroll.js" | relative_url }}"></script>
     {% include header.html %}
     <div class="content">
       {{ content }}
+      <a class="finger-container" href="javascript:scrollUp();">
+        <span class="finger">👆</span>
+      </a>
     </div>
     {% include footer.html %}
+    <script src="{{ "/assets/js/finger.js" | relative_url }}"></script>
   </body>
 </html>

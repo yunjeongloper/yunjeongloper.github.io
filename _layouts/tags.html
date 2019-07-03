@@ -10,10 +10,9 @@ layout: page
   {% unless forloop.last %}
     {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
     <a href="#{{ this_word | cgi_escape }}" class="tag-label">
-        {{ this_word }}
+        <span class="title">{{ this_word }}</span>
+        <span class="postNumber">{{ site.tags[this_word].size }}</span>
     </a>
-    <!-- <h2 id="{{ this_word | cgi_escape }}" class="tag-title">
-    </h2> -->
   {% endunless %}
 {% endfor %}
 

@@ -14,11 +14,13 @@
   }
 
   .color-black {
-    color: black
+    color: black;
+    transition: all ease 500ms 0s;
   }
 
   .color-white {
-    color: white
+    color: white;
+    transition: all ease 500ms 0s;
   }
 
   .avatar {
@@ -100,9 +102,11 @@
 }
 
 .background-white {
-  background: white
+  background: white;
+  transition: all ease 100ms 0s;
 }
 
 .borderbottom-1 {
   border-bottom: 1px solid $border-color;
+  transition: all ease 500ms 0s;
 }

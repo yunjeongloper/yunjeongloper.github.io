@@ -1,0 +1,16 @@
+
+.finger-container {
+    position: fixed; 
+    bottom: 1em; 
+    right: 1em;
+    @extend %padding-header;
+
+    .finger {
+        font-size: 2em;
+        text-shadow: 2px 2px 2px rgb(206, 206, 206);
+    }
+}
+
+.finger-hidden {
+    display: hidden;
+}
