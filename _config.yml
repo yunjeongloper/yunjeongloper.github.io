@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: ""
-url: "https://yunjeongloper.github.io/"
+url: "https://yunjeongloper.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
