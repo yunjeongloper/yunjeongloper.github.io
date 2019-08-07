@@ -2,15 +2,15 @@
   display: inline-block;
   margin-right: 0.6em;
   margin-bottom: 0.5em;
-  border-radius: 0.3em;
-  border: 1px solid $border-color;
+  border-radius: 0.2em;
+  border: 1px solid $border-color-dark;
   color: rgb(55, 61, 68);
   padding-top: 0.4em;
   padding-bottom: 0.4em;
 
-  .title {
-    border-right: 1px solid $border-color;
-    background: rgb(243, 243, 243);
+  .label-title {
+    border-right: 1px solid $border-color-dark;
+    background: rgba(100, 100, 100, 0.05);
     padding: 0.4em 0.6em;
   }
 
