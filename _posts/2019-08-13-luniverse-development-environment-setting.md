@@ -4,6 +4,8 @@ title: Luniverse 개발 환경 셋팅하기
 tags: [Luniverse, Blockchain]
 ---
 
+루니버스(Luniverse)는 업비트를 운영하는 두나무㈜의 블록체인 연구소인 람다256이 만든 블록체인 플랫폼이다. 이 글을 시작으로 **루니버스를 사용해서 DApp 개발하기** 시리즈를 연재할 계획이다. 먼저 개발 환경 셋팅 방법을 알아보자.
+
 ## 루니버스의 공식 문서 살펴보기
 
 [루니버스에 대하여(About Luniverse)](https://guide.luniverse.io/docs/about-luniverse)
@@ -14,7 +16,7 @@ tags: [Luniverse, Blockchain]
 
 개발 환경 구성은 아래와 같다. 각각에 대한 설명은 아래에서 이어진다.
 
-![env](../assets/img/1-39a8c9dd-4169-4f91-a57c-b31248f0a98a.png)
+![env](/assets/img/1-39a8c9dd-4169-4f91-a57c-b31248f0a98a.png)
 
 ## 스마트 컨트랙트 개발 환경 (루니버스와 연동까지)
 
@@ -43,9 +45,9 @@ tags: [Luniverse, Blockchain]
 
 먼저 Atom IDE에 들어가서 루니버스 관련 package를 설치해주자. '**luniver-atom-plugin**'을 설치해주면 된다.
 
-![plugin](../assets/img/_2019-08-13__3-3ab80528-2a60-40e8-9878-07933caeca47.33.34.png)
+![plugin](/assets/img/2019-08-13__3-3ab80528-2a60-40e8-9878-07933caeca47.33.34.png)
 
-![plugin-settings](../assets/img/_2019-08-13__3-d6b7cbf1-eb8b-4467-b0e4-fd9bda5a16ea.35.49.png)
+![plugin-settings](/assets/img/2019-08-13__3-d6b7cbf1-eb8b-4467-b0e4-fd9bda5a16ea.35.49.png)
 
 플러그인을 사용하기 위해 Setting 메뉴에 있는 **Lunivers Access Token**을 입력해주어야 한다.
 
@@ -53,24 +55,24 @@ tags: [Luniverse, Blockchain]
 
 [https://console.luniverse.io/auth/3rd-party/signin](https://console.luniverse.io/auth/3rd-party/signin)
 
-![accesskey-login](../assets/img/_2019-08-13__3-68dff79f-c16b-40b3-9605-5637b19d10df.39.46.png)
+![accesskey-login](/assets/img/2019-08-13__3-68dff79f-c16b-40b3-9605-5637b19d10df.39.46.png)
 
 발급받은 Access Token을 입력해주면 나면 Atom IDE에서 루니버스 연동 셋팅 끝!
 
 ### 이제 Atom에서 개발한 컨트랙트를 나의 루니버스 블록체인 네트워크 ContractList에 곧바로 올릴 수 있다! (최종 배포는 루니버스 콘솔에서 해야 함)
 
-![atom-solidity](../assets/img/_2019-08-13__3-c139e613-db2e-431d-aa3b-03db7c3e7bc5.55.49.png)
+![atom-solidity](/assets/img/2019-08-13__3-c139e613-db2e-431d-aa3b-03db7c3e7bc5.55.49.png)
 
 배포하고자 하는 solidity 파일에 가서 오른쪽 버튼을 클릭하면 Compile Contract Code 메뉴를 찾을 수 있다.
 
-![atom-menu](../assets/img/_2019-08-13__3-e9c5d07d-de32-48b8-8c9b-10e1bf466e02.56.24.png)
+![atom-menu](/assets/img/2019-08-13__3-e9c5d07d-de32-48b8-8c9b-10e1bf466e02.56.24.png)
 
 정보를 입력하고 Apply를 누르면 배포가 진행된다.
 
-![atom-inputs](../assets/img/_2019-08-13__3-d80f8ec3-c3d3-4616-ab32-eb0cbf259adc.57.13.png)
+![atom-inputs](/assets/img/2019-08-13__3-d80f8ec3-c3d3-4616-ab32-eb0cbf259adc.57.13.png)
 
 잠시 후에 루니버스 콘솔에서 위에서 선택한 체인의 ContractList를 들어가면 아래처럼 컨트랙트가 추가된 것을 볼 수 있다. 아래 컨트랙트는 아직 배포가 준비된 상태이고, 직접 배포 버튼을 눌러야 네트워크에 배포가 완료된다.
 
-![console](../assets/img/_2019-08-13__3-5bff681f-50f4-413b-a653-11bf6393680a.59.08.png)
+![console](/assets/img/2019-08-13__3-5bff681f-50f4-413b-a653-11bf6393680a.59.08.png)
 
 > [루니버스 한국 사용자 그룹 wiki(Github 저장소)](https://github.com/luniversekr/wiki)에도 업로드 된 글입니다. 루니버스 한국 사용자 그룹 wiki에서는 이 외에도 각종 루니버스에 대한 정보를 아카이브하고 있습니다.
