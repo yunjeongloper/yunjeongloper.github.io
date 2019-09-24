@@ -1,16 +1,20 @@
 ---
 layout: post
-title: [NomadCoders] Typescript로 블록체인 만들기
+title: NomadCoders - Typescript로 블록체인 만들기
 tags: [Typescript, Blockchain]
 ---
 
-> 이 글은 [NomadCoders 님의 강의](https://academy.nomadcoders.co/courses/)를 수강하고 나름대로 정리하여 업로드한 글입니다
+> 이 글은 [NomadCoders 님의 강의](https://academy.nomadcoders.co/courses/)를 수강하고 정리한 글입니다.
 
-강의 하나의 분량을 5분 정도로 끊으시는데 아주 손에 땀을 쥐게 하는 5분이었다. 내 기준 굉장히 타이트했기 때문에 잠시도 한 눈을 팔 수 없었다. 중간 중간 찰진 욕을 들으면 넘 웃겨서 잠시 긴장이 풀리지만 금방 정신을 차려야 한다... 암튼 결론은 니꼴라스님 강의 최고시다 🥰 니꼬님 말투를 살려서 정리해보았다
+강의 하나의 분량을 5분 정도로 끊으시는데 아주 손에 땀을 쥐게 하는 5분이었다. 내 기준 굉장히 타이트했기 때문에 잠시도 한 눈을 팔 수 없었다. 중간 중간 찰진 욕을 들으면 넘 웃겨서 잠시 긴장이 풀리지만 금방 정신을 차려야 한다... 암튼 결론은 니꼴라스님 강의 최고시다 🥰
+
+니꼬님 말투를 살려서 정리해보았다
 
 ---
 
-그냥 js 문법대로 작성한 예시이다
+내 정보를 파라미터로 보내 호출하면 그 내용을 한 문장으로 반환해주는 함수임
+
+먼저 그냥 js 문법대로 작성해보자
 
 ```javascript
 const name = "Yun Jeong",
@@ -26,7 +30,9 @@ sayHi(name, age, gender);
 export {};
 ```
 
-js에서는 함수를 호출할 때 파라미터를 선언한 대로 넣어주든 안 넣든 오류가 나지 않는다. 근데 이게 Typescript(이하 ts)라면...
+js에서는 함수를 호출할 때 파라미터를 선언한 대로 넣어주든 안 넣든 오류가 나지 않는다.
+
+근데 Typescript(이하 ts)에서는...
 
 ```javascript
 const name = "Yun Jeong",
@@ -42,17 +48,17 @@ sayHi(name, age);
 export {};
 ```
 
-똑같이 이렇게 코드를 짰을 때 오류를 빵!! 하고 보여줘. 실행 할 수가 없다. 멍청한 개발자의 실수를 미연에 방지해주는거;; js에서는 이런거 본 적 없을껄? 그냥
-`Hello Yun Jeong, you are a 25, you are a undefined`가 출력되겠지
+똑같이 이렇게 코드를 짰을 때 오류를 빵!! 하고 보여줘. 멍청한 개발자의 실수를 미연에 방지해주는거;; js에서는 이런거 본 적 없을껄? 그냥
+`Hello Yun Jeong, you are a 25, you are a undefined` 가 출력되겠지
 
-만약 sayHi의 gender를 optional하게 받고싶다면?
+만약 sayHi 함수의 gender를 optional하게 받고싶다면?
 
 ```javascript
 const name = "Yun Jeong",
     age = 25,
     gender = "female";
 
-const sayHi = (name, age, gender**?**) => {
+const sayHi = (name, age, gender?) => {
     console.log(`Hello ${name}, you are ${age}, you are a ${gender}`);
 }
 
@@ -61,7 +67,7 @@ sayHi(name, age);
 export {};
 ```
 
-이렇게 function을 정의할 때 **? (Optional)**를 사용하면 됨. Cool~
+이렇게 function을 정의할 때 **?(Optional)**를 사용하면 됨. Cool~
 
 ---
 
@@ -77,7 +83,7 @@ sayHi("YUMYUMYUM", 5000, "female");
 export {};
 ```
 
-개발자가 실수할 수 있느느 부분을 미리 방지해주는군, 더 예측 가능한 코드가 되겠어
+개발자가 실수할 수 있는 부분을 미리 방지해주는군, 더 예측 가능한 코드가 되겠어
 
 이제는 함수의 리턴 값을 Typed 하게 바꿔보자
 
@@ -97,11 +103,11 @@ export {};
 
 아니 근데 yarn start 매번 입력해야 하는지..? No!
 
-tsc-watch라는 라이브러리가 ts의 변경사항을 보고 있다가 업데이트 해준다
+tsc-watch라는 라이브러리를 사용하면 더욱 쉽게 개발할 수 있다. tsh-watch는 ts에 변경 사항이 발생하는 것을 보고있다가 재빠르게 업데이트 해준다
 
 `yarn add tsc-watch --dev`
 
-로 패키지를 설치해주고 package.json의 start script를 아래처럼 변경해줌
+로 패키지를 설치해주고 package.json의 start script를 아래처럼 변경해주자
 
 ```json
 "scripts": {
@@ -111,11 +117,10 @@ tsc-watch라는 라이브러리가 ts의 변경사항을 보고 있다가 업데
 
 위에 --onSuccess는 ts compile(tsc)이 성공했을 시에만 동작하라는 뜻
 
-그리고 root에 몽땅 때려넣어진 파일들을 정리해주어야 한다
+그리고 root에 몽땅 때려넣어진 파일들을 정리해주자
 
-→ compile후에 생긴 js파일은 dist/ 밑으로
-
-→ ts파일은 src/ 밑으로
+- compile후에 생긴 js파일은 dist/ 밑으로
+- ts파일은 src/ 밑으로
 
 파일 위치를 변경하고 난 후에는 config 옵션도 변경해주어야 한다
 
@@ -192,7 +197,7 @@ export {};
 
 interface는 js로 컴파일되지 않아. 근데 가끔 인터페이스를 js에 넣고싶을 때가 있을텐데, 이럴 때는 ^class^를 사용하면 됨
 
-class!!!! js에서는 class에 속성들에 대해 묘사할 필요가 없는데, ts에서는 클래스가 어떤 속성을 가져야 하는지, 어떤 권한을 가져야 하는지 알려줘야 함
+class!!!! js에서는 class를 사용할 때 class의 속성들에 대해 묘사하지 않는다. 하지만 ts에서는 class의 속성들이 어떤 타입이어야 하는지 하는지, 어떤 권한을 가져야 하는지 상세하게 알려줘야 한다
 
 interface를 class로 바꿔보자
 
@@ -219,9 +224,9 @@ console.log(sayHi(me));
 export {};
 ```
 
-인터페이스를 쓰거나 클래스를 쓰는 것은 상황에 따라 선택해서 쓰면 된다. interface는 사실 ts에서 적용하기에 더 적합한 것이긴 하다. 하지만 react, express 등등을 사용한다면 class를 사용해야 할 것이다
+인터페이스를 쓰거나 클래스를 쓰는 것은 상황에 따라 선택해서 쓰면 된다. 사실 interface는 ts에 적용하기에 더 적합한 것이고 react, express 등등을 사용한다면 class를 사용해야 할 것이다
 
-ts의 private/public을 사용하여 보호해야 할 데이터를 지정 해줌으로써 더 secure한 코딩이 가능해진다. 외부에 알리고 싶지 않은 속성들을 정확히 구분하는 것임
+ts의 private/public을 사용하여 보호해야 할 데이터를 지정 해줌으로써 더 secure한 코딩이 가능해진다. 외부에 알리고 싶지 않은 속성들을 정확히 구분하는 것!
 
 ---
 
@@ -254,7 +259,7 @@ console.log(blockchain);
 export {};
 ```
 
-위의 코드가 실행되면..
+위의 코드를 실행하면..
 
 ```javascript
 [
@@ -387,7 +392,7 @@ console.log(blockchain);
 export {};
 ```
 
-여기서 콘솔을 찍고 나면 새로 생성한 블록의 index가 전부 1로 나오는데, 이건 버그는 아니다. 아직 blockchain에 블록을 push(add)하지 않았기 때문이다
+여기서 콘솔을 찍고 나면 새로 생성한 블록의 index가 전부 1로 나오는데, 버그가 아니다. 아직 blockchain에 블록을 push(add)하지 않았기 때문이다
 
 ---
 
@@ -465,11 +470,11 @@ export {};
 ---
 
 ```javascript
-import * as CryptoJS from 'crypto-js'; 
+import * as CryptoJS from 'crypto-js';
 
 class Block {
     static calculateBlockHash = (
-        index: number, 
+        index: number,
         previousHash: string, 
         data: string, 
         timestamp: number
@@ -543,7 +548,7 @@ export {};
 
 완성! 하지만 아직 새로 생성된 블록을 blockchain에 추가하는 부분이 빠져있다
 
-새로 생성된 블록을 addBlock을 사용하여서 blockchain에 등록해보자. createNewBlock 함수를 아래처럼 수정하면 된다
+블록을 새로 생성한 이후에 addBlock을 사용하여서 blockchain에 등록해주자. createNewBlock 함수를 아래처럼 수정하면 된다
 
 ```javascript
 const createNewBlock = (data: string) : Block => {
@@ -559,7 +564,7 @@ const createNewBlock = (data: string) : Block => {
 
 이제 실제로 createNewBlock을 호출해보고 blockchain을 출력해보자.
 
-호출 X 3
+createNewBlock X 3
 
 ```javascript
 createNewBlock("second block");
@@ -568,7 +573,7 @@ createNewBlock("fourth block");
 console.log(blockchain);
 ```
 
-콘솔 창에 이렇게는 찍힌다. 블록 3개가 추가된 것을 확인할 수 있다. hash 값을 비교해보면 정상적으로 hash 계산이 수행되었다는 것도 알 수 있다.
+콘솔 창에 출력된 것을 보면 블록 3개가 추가된 것을 확인할 수 있다. hash 값을 비교해보면 정상적으로 hash 계산이 수행되었다는 것도 알 수 있다.
 
 ```console
 [
