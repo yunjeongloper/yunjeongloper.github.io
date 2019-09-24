@@ -610,4 +610,6 @@ console.log(blockchain);
 
 끄읏 -
 
-이제 무슨 강좌를 들어볼까나
+![crtf](/assets/img/crtf_typescript.png)
+
+쟈란 -
