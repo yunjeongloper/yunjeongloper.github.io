@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
     f.match(%r{^(assets|pages|_(includes|layouts|sass)/|(LICENSE|README|search.html)((\.(txt|md|markdown)|$)))}i)
   end
 
-  spec.add_runtime_dependency "jekyll", "~> 3.4"
+  spec.add_runtime_dependency "jekyll", ">= 3.4", "< 5.0"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
 
   spec.add_development_dependency "bundler", "~> 1.12"
