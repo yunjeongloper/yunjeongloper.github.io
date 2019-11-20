@@ -5,13 +5,17 @@ tags: [javascript]
 ---
 
 자바스크립트가 데이터를 처리하는 과정을 살펴봄으로써 기본형 타입과 참조형 타입이 서로 다르게 동작하는 이유를 이해하는 것을 목표로 함
-  
+
+---
+
 ### 데이터 타입의 종류
 
 ![자바스크립트의 데이터타입](/assets/img/js/data-type.png)
 
 - 기본형은 값이 담긴 주솟값을 바로 복제하는 반면 참조형은 값이 담긴 주소값들로 이루어진 묶음을 가리키는 주솟값을 복제한다는 점이 다름
   
+---
+
 ### 데이터 타입에 관한 배경지식
 
 #### 메모리와 데이터
@@ -24,7 +28,9 @@ tags: [javascript]
 
 - 변수 : 변할 수 있는 데이터
 - 식별자 : 어떤 데이터를 식별하는 데 사용하는 이름. 즉, 변수명
-  
+
+---
+
 ### 변수 선언과 데이터 할당
 
 #### 변수 선언
@@ -47,7 +53,9 @@ a = 'abc';      // 데이터 할당
   - 데이터 변환을 자유롭게 할 수 있게 함
   - 메모리를 더 효율적으로 관리하기 위해
   - 중복된 데이터에 대한 처리 효율이 높아짐
-  
+
+---
+
 ### 기본형 데이터와 참조형 데이터
 
 #### 불변값
@@ -74,7 +82,9 @@ a = 'abc';      // 데이터 할당
 
 - 참조형 데이터 자체를 변경할 경우가 아니라!
 - 그 내부의 프로퍼티를 변경할 때만 성립함
-  
+
+---
+
 ### 불변(Immutable) 객체
 
 #### 불변 객체를 만드는 간단한 방법
@@ -99,9 +109,11 @@ a = 'abc';      // 데이터 할당
 - ```undefined``` : 어떤 변수에 값이 존재하지 않을 경우
 - ```null``` : 사용자가 명시적으로 '없음'을 표현하기 위해 대입한 값
 - '없음'을 표현하기 위해 ```undefiend```를 대입하는 것은 지양하는 것이 좋다
-  
+
+---
+
 ### 참고
 
-> [코어 자바스크립트](http://www.yes24.com/Product/Goods/78586788)
-> <https://tutorial.eyehunts.com/js/javascript-data-types-and-examples/>
-> <https://blog.sessionstack.com/how-javascript-works-memory-management-how-to-handle-4-common-memory-leaks-3f28b94cfbec>
+> [코어 자바스크립트](http://www.yes24.com/Product/Goods/78586788)  
+> <https://tutorial.eyehunts.com/js/javascript-data-types-and-examples/>  
+> <https://blog.sessionstack.com/how-javascript-works-memory-management-how-to-handle-4-common-memory-leaks-3f28b94cfbec>  
