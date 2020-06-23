@@ -1,15 +1,29 @@
 .site-header {
   @extend %padding-header;
   // background: $brand-color;
-  // border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
   display: inline-block;
   position: sticky;
   top: 0;
-  float: left;
   width: 100%;
+
+  .site-title {
+    // font-family: 'Alike Angular', serif;
+    font-family: 'B612 Mono', monospace;
+    // font-family: 'Gravitas One', cursive;
+    // font-family: 'Lateef', cursive;
+    float: left;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1.5;
+  }
+
+  .page-link {
+    margin-left: 0.5em;
+  }
   
   a {
-    color: white;
+    color: black;
     font-size: 1.0em;
   }
 
@@ -30,13 +44,6 @@
     margin-top: 0;
     border-radius: 0.2em;
     margin-right: 1em;
-  }
-
-  .site-title {
-    float: left;
-    font-weight: bold;
-    font-size: 1.4em;
-    line-height: 1.5;
   }
 
   .site-nav {
