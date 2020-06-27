@@ -11,12 +11,12 @@
         var homeHeight = (home[0] === undefined)? -10 : home[0].offsetHeight;
 
         if (window.pageYOffset + navHeight >= homeHeight) {
-            navbar[0].classList.add('background-white', 'borderbottom-1');
+            navbar[0].classList.add('background-seashell', 'borderbottom-1');
             for(var i = 0; i < pageLink.length; i ++ ) {
                 pageLink[i].classList.add('color-black');
             }
         } else {
-            navbar[0].classList.remove('background-white', 'borderbottom-1');
+            navbar[0].classList.remove('background-seashell', 'borderbottom-1');
             for(var i = 0; i < pageLink.length; i ++ ) {
                 pageLink[i].classList.remove('color-black');
             }

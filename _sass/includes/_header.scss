@@ -113,6 +113,11 @@
   transition: all ease 100ms 0s;
 }
 
+.background-seashell {
+  background: seashell;
+  transition: all ease 100ms 0s;
+}
+
 .borderbottom-1 {
   border-bottom: 1px solid $border-color;
   transition: all ease 500ms 0s;
